@@ -10,6 +10,9 @@ WORKDIR $CATALINA_HOME
 ENV TOMCAT_MAJOR 8
 ENV TOMCAT_VERSION 8.5.78
 
+RUN yum install -y wget &&\
+                   yum clean all && \
+                   rm -rf /var/cache/yum
 
 RUN wget -q http://archive.apache.org/dist/tomcat/tomcat-${TOMCAT_MAJOR}/v${TOMCAT_VERSION}/bin/apache-tomcat-${TOMCAT_VERSION}.tar.gz \
    && tar xvzf apache-tomcat-${TOMCAT_VERSION}.tar.gz -C /usr/local/tomcat --strip-components=1 \
