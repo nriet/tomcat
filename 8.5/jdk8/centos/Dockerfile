@@ -10,7 +10,7 @@ WORKDIR $CATALINA_HOME
 ENV TOMCAT_MAJOR 8
 ENV TOMCAT_VERSION 8.5.78
 
-RUN yum install -y wget &&\
+RUN yum install -y wget && \
                    yum clean all && \
                    rm -rf /var/cache/yum
 
