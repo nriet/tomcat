@@ -7,9 +7,9 @@ COPY requirements.txt /tmp
 RUN apt-get update -y && \
 	apt-get install -y python3.7 python3-pip && \
 	apt-get clean all && \
-	pip3 install --no-cache-dir -r /tmp/requirements.txt && \
 	rm -rf /var/cache/apt 
-
+	
+RUN pip3 install --no-cache-dir -r /tmp/requirements.txt
 
 EXPOSE 8080
 
