@@ -7,7 +7,7 @@ COPY requirements.txt /tmp
 RUN apt-get update -y && \
 	apt-get install -y python3.7 python3-pip && \
 	apt-get clean all && \
-	pip3 install --upgrade pip && pip3 install -r /tmp/requirements.txt && \
+	pip3 install -r /tmp/requirements.txt && \
 	rm -rf /var/cache/apt 
 
 
