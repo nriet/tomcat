@@ -1,4 +1,4 @@
-FROM tomcat:8.5.79-jdk8-openjdk-slim-buster
+FROM tomcat:8.5.78-jdk8-openjdk-slim-buster
 
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
