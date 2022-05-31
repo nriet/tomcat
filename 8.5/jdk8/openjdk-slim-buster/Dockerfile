@@ -3,10 +3,11 @@ FROM tomcat:8.5.79-jdk8-openjdk-slim-buster
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
 RUN apt-get update -y && \
-	apt-get install net-tools&& \
+	apt-get install net-tools locales && \
 	apt-get clean all && \
 	rm -rf /var/cache/apt 
 
+ENV LANG zh_CN.utf8 
 ENV TZ PRC
 ENV LC_ALL zh_CN.UTF-8
 
