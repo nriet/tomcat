@@ -8,7 +8,6 @@ RUN apt-get update -y && \
 	rm -rf /var/cache/apt 
 
 ENV TZ PRC
-ENV LC_ALL zh_CN.UTF-8
 
 RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
