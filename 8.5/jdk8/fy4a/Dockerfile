@@ -15,7 +15,8 @@ COPY requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-RUN f2py -m index2data -c index2data.f90
+RUN cd /app/fy4a/; \
+	f2py -m index2data -c index2data.f90
 
 EXPOSE 8080
 
