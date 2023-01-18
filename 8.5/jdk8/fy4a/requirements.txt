@@ -1,5 +1,3 @@
+h5py
 numpy
-netcdf4
-cdsapi
-xlrd
-pandas
+netCDF4
