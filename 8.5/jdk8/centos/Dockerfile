@@ -8,7 +8,7 @@ RUN mkdir -p "$CATALINA_HOME"
 WORKDIR $CATALINA_HOME
 
 ENV TOMCAT_MAJOR 8
-ENV TOMCAT_VERSION 8.5.78
+ENV TOMCAT_VERSION 8.5.82
 
 RUN yum install -y wget && \
                    yum clean all && \

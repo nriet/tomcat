@@ -30,22 +30,23 @@ jobs:  # workflow中的job
         with:
           images: nriet/tomcat
 
-      # - name: openjdk-slim-buster
-      #   uses: docker/build-push-action@v2 # docker build  & push
-      #   with:
-      #     context: 8.5/jdk8/openjdk-slim-buster/.
-      #     push: true
-      #     tags: nriet/tomcat:8.5.78-jdk8-openjdk-slim-buster
+      - name: openjdk-slim-buster
+        uses: docker/build-push-action@v2 # docker build  & push
+        with:
+          context: 8.5/jdk8/openjdk-slim-buster/.
+          push: true
+          tags: nriet/tomcat:8.5.82-jdk8-openjdk-slim-buster
         
-      # - name: openjdk-slim-buster-python3
-      #   uses: docker/build-push-action@v2 # docker build  & push
-      #   with:
-      #     context: 8.5/jdk8/openjdk-slim-buster-python3/.
-      #     push: true
-      #     tags: nriet/tomcat:8.5.78-jdk8-openjdk-slim-buster-python3
+      - name: openjdk-slim-buster-python3
+        uses: docker/build-push-action@v2 # docker build  & push
+        with:
+          context: 8.5/jdk8/openjdk-slim-buster-python3/.
+          push: true
+          tags: nriet/tomcat:8.5.82-jdk8-openjdk-slim-buster-python3
+          
       - name: openjdk-slim-buster-python3-fy4a
         uses: docker/build-push-action@v2 # docker build  & push
         with:
           context: 8.5/jdk8/fy4a/.
           push: true
-          tags: nriet/tomcat:8.5.78-jdk8-openjdk-slim-buster-python3-fy4a
+          tags: nriet/tomcat:8.5.82-jdk8-openjdk-slim-buster-python3-fy4a
