@@ -3,7 +3,7 @@ FROM tomcat:8.5.82-jdk8-openjdk-slim-buster
 MAINTAINER Axiu <itzyx@vip.qq.com>
 
 RUN apt-get update -y && \
-	apt-get install -y net-tools curl && \
+	apt-get install -y net-tools curl libfreetype6-dev fontconfig && \
 	apt-get clean all && \
 	rm -rf /var/cache/apt 
 
