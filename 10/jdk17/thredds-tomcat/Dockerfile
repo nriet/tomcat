@@ -70,8 +70,9 @@ COPY server.xml ${CATALINA_HOME}/conf/
 
 # Tomcat start script
 COPY start-tomcat.sh ${CATALINA_HOME}/bin
-COPY entrypoint.sh /
+#COPY entrypoint.sh /
 
-# Start container
-ENTRYPOINT ["/entrypoint.sh"]
+# Start container 
+#取消重新授权用户 
+#ENTRYPOINT ["/entrypoint.sh"] 
 CMD ["start-tomcat.sh"]
