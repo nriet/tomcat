@@ -62,6 +62,7 @@ jobs:
           context: 10/jdk17/thredds-tomcat/.
           platforms: |
             linux/amd64
+            linux/arm64
           push: true
           tags: |
             ${{ env.DOCKERHUB_REPO }}:10-jdk17-thredds
